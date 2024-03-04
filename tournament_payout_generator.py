@@ -123,6 +123,51 @@ class TournamentPayoutGenerator:
                             ninth_place_payout + tenth_place_payout + eleventh_place_payout + twelth_place_payout +
                             (rebated_player_count * self.entry_fee))
 
+        # round everything up to $5 increments; take it away from first place :*(
+        while second_place_payout % 5 != 0:
+            first_place_payout -= 1
+            second_place_payout += 1
+
+        while third_place_payout % 5 != 0:
+            first_place_payout -= 1
+            third_place_payout += 1
+
+        while fourth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            fourth_place_payout += 1
+
+        while fifth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            fifth_place_payout += 1
+
+        while sixth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            sixth_place_payout += 1
+
+        while seventh_place_payout % 5 != 0:
+            first_place_payout -= 1
+            seventh_place_payout += 1
+
+        while eighth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            eighth_place_payout += 1
+
+        while ninth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            ninth_place_payout += 1
+
+        while tenth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            tenth_place_payout += 1
+
+        while eleventh_place_payout % 5 != 0:
+            first_place_payout -= 1
+            eleventh_place_payout += 1
+
+        while twelth_place_payout % 5 != 0:
+            first_place_payout -= 1
+            twelth_place_payout += 1
+
         print(f"${self.entry_fee}\t{self.player_count}\t1st\t${first_place_payout}")
         print(f"${self.entry_fee}\t{self.player_count}\t2nd\t${second_place_payout}")
         print(f"${self.entry_fee}\t{self.player_count}\t3rd\t${third_place_payout}")
