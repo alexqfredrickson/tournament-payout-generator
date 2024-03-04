@@ -6,7 +6,7 @@ class UnitTests(unittest.TestCase):
 
     @staticmethod
     def test_generate_payout_structure():
-        player_counts = range(32, 129)
+        player_counts = range(16, 129)
         entry_fees = [10, 15, 20]
 
         for p in player_counts:
