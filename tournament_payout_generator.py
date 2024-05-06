@@ -233,6 +233,8 @@ class TournamentPayoutGenerator:
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t8th\t${self.entry_fee}\n")
 
             elif player_count_48_63:
+                results_file.write(f"${self.entry_fee}\t{self.player_count}\t5th\t${fifth_place_payout}\n")
+                results_file.write(f"${self.entry_fee}\t{self.player_count}\t6th\t${sixth_place_payout}\n")
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t7th\t${seventh_place_payout}\n")
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t8th\t${eighth_place_payout}\n")
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t9th\t${self.entry_fee}\n")
@@ -241,6 +243,8 @@ class TournamentPayoutGenerator:
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t12th\t${self.entry_fee}\n")
 
             elif player_count_64_128:
+                results_file.write(f"${self.entry_fee}\t{self.player_count}\t5th\t${fifth_place_payout}\n")
+                results_file.write(f"${self.entry_fee}\t{self.player_count}\t6th\t${sixth_place_payout}\n")
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t7th\t${seventh_place_payout}\n")
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t8th\t${eighth_place_payout}\n")
                 results_file.write(f"${self.entry_fee}\t{self.player_count}\t9th\t${ninth_place_payout}\n")
