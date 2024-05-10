@@ -1,14 +1,11 @@
 import unittest
-from tournament_payout_generator import TournamentPayoutGenerator
+from main import TournamentPayoutGenerator
 
 
 class UnitTests(unittest.TestCase):
 
     @staticmethod
     def test_generate_payout_structure():
-        player_counts = range(16, 129)
-        entry_fees = [10, 15, 20]
-
-        for p in player_counts:
-            for e in entry_fees:
-                TournamentPayoutGenerator(player_count=p, entry_fee=e).generate_tournament_payout_structure()
+        for entry_fee in [10, 15, 20]:
+            for player_count in range(16, 129):
+                TournamentPayoutGenerator(player_count, entry_fee).print_payouts()
